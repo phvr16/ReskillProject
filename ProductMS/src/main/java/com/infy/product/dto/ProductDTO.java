@@ -5,15 +5,15 @@ import javax.validation.constraints.Pattern;
 
 public class ProductDTO {
 	private String prodId;
-	@Pattern(regexp = "([A-Za-z]+([ ][A-Za-z]+)*){1,100}", message = "{customer.name.invalid}")
+	@Pattern(regexp = "([A-Za-z]+([ ][A-Za-z]+)*){1,100}", message = "{Product.Name.Invalid}")
 	private String productName;
-	@Min(value = 200,message = "{customer.price.invalid}")
+	@Min(value = 200,message = "{Product.Price.Invalid}")
 	private Float price;
-	@Min(value = 10,message = "{customer.stock.invalid}")
+	@Min(value = 10,message = "{Product.Stock.Invalid}")
 	private Integer stock;
-	@Pattern(regexp = "([A-Za-z]+([ ][A-Za-z]+)*){1,500}", message = "{customer.discription.invalid}")
+	@Pattern(regexp = "([A-Za-z]+([ ][A-Za-z]+)*){1,500}", message = "{Product.Discription.Invalid}")
 	private String description;
-	@Pattern(regexp = "[A-Za-z]+[\\\\.](png|jpeg)", message = "{customer.image.invalid}")
+	@Pattern(regexp = "[A-Za-z]+[\\\\.](png|jpeg)", message = "{Product.Image.Invalid}")
 	private String image;
 	private String category;
 	private String sellerId;
